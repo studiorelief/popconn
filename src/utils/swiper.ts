@@ -3,37 +3,65 @@ import 'swiper/css/bundle';
 // @ts-expect-error : swiper bundle root
 import Swiper from 'swiper/bundle';
 
-export function swiperHome() {
-  const swiperContainers = document.querySelectorAll('.swiper');
+export function swiperCouncil() {
+  const swiperCouncilContainer = document.querySelectorAll('.swiper.is-council');
 
-  swiperContainers.forEach((container) => {
+  swiperCouncilContainer.forEach((container) => {
     new Swiper(container, {
       loop: true,
-      slidesPerView: '1',
-      spaceBetween: 0,
+      slidesPerView: '4',
+      spaceBetween: 40,
       speed: 500,
-      centeredSlides: true,
-      effect: 'slide', // Default effect
-      // Other available effects:
-      // effect: 'fade',
-      // effect: 'cube',
-      // effect: 'coverflow',
-      // effect: 'flip',
-      // effect: 'creative',
-      // effect: 'cards',
+      centeredSlides: false,
+      effect: 'slide',
       mousewheel: {
         forceToAxis: true,
       },
       autoplay: {
-        delay: 2000,
+        delay: 4000,
         pauseOnMouseEnter: true,
         disableOnInteraction: false,
         reverseDirection: false,
       },
-      pagination: {
-        el: '.swiper-bullet-wrapper',
-        clickable: true,
+      navigation: {
+        nextEl: '.swiper-right',
+        prevEl: '.swiper-left',
       },
     });
   });
+}
+
+export function swiperPioneers() {
+  const swiperPioneersContainers = document.querySelectorAll('.swiper.is-pioneers');
+
+  swiperPioneersContainers.forEach((container) => {
+    new Swiper(container, {
+      loop: true,
+      slidesPerView: 'auto',
+      spaceBetween: 0,
+      speed: 500,
+      centeredSlides: false,
+      effect: 'fade',
+      mousewheel: {
+        forceToAxis: true,
+      },
+      autoplay: {
+        delay: 4000,
+        pauseOnMouseEnter: true,
+        disableOnInteraction: false,
+        reverseDirection: false,
+      },
+    });
+  });
+}
+
+export function resetSwiperPioneers() {
+  const loadMoreButton = document.querySelector('#reset-council-swiper');
+  if (loadMoreButton) {
+    loadMoreButton.addEventListener('click', () => {
+      setTimeout(() => {
+        swiperCouncil();
+      }, 250);
+    });
+  }
 }

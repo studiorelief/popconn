@@ -4,8 +4,8 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 export function gsapParallax() {
-  const topElements = document.querySelectorAll('[gsap="top"]');
-  const bottomElements = document.querySelectorAll('[gsap="bottom"]');
+  const topElements = document.querySelectorAll('[gsap="to-bottom"]');
+  const bottomElements = document.querySelectorAll('[gsap="to-top"]');
   const middleElements = document.querySelectorAll('[gsap="middle"]');
 
   gsap.utils.toArray(topElements).forEach((element) => {
