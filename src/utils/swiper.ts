@@ -27,6 +27,14 @@ export function swiperCouncil() {
         nextEl: '.swiper-right',
         prevEl: '.swiper-left',
       },
+      breakpoints: {
+        479: {
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: 'auto',
+        },
+      },
     });
   });
 }
@@ -50,14 +58,6 @@ export function swiperPioneers() {
         pauseOnMouseEnter: true,
         disableOnInteraction: false,
         reverseDirection: false,
-      },
-      breakpoints: {
-        479: {
-          slidesPerView: 1,
-        },
-        768: {
-          slidesPerView: 'auto',
-        },
       },
     });
   });
