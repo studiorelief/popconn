@@ -27,14 +27,6 @@ export function swiperCouncil() {
         nextEl: '.swiper-right',
         prevEl: '.swiper-left',
       },
-      breakpoints: {
-        479: {
-          slidesPerView: '1',
-        },
-        768: {
-          slidesPerView: '4',
-        },
-      },
     });
   });
 }
