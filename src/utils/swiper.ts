@@ -29,10 +29,10 @@ export function swiperCouncil() {
       },
       breakpoints: {
         479: {
-          slidesPerView: 1,
+          slidesPerView: '1',
         },
         768: {
-          slidesPerView: 'auto',
+          slidesPerView: '4',
         },
       },
     });
