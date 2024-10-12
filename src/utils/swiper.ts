@@ -51,6 +51,14 @@ export function swiperPioneers() {
         disableOnInteraction: false,
         reverseDirection: false,
       },
+      breakpoints: {
+        479: {
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: 'auto',
+        },
+      },
     });
   });
 }
