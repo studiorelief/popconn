@@ -4,6 +4,7 @@ import { gsapParallax } from '$utils/gsap';
 import { loadScript } from '$utils/loadscript';
 import { initNavbarScroll } from '$utils/navbar';
 import { resetSwiperPioneers, swiperCouncil, swiperPioneers } from '$utils/swiper';
+import { tfTrigger } from '$utils/typeform';
 
 import { marqueeAnimation } from './utils/marquee';
 
@@ -20,6 +21,8 @@ window.Webflow.push(() => {
   marqueeAnimation();
   gsapParallax();
   initNavbarScroll();
+
+  tfTrigger();
 
   /* swiper */
   swiperCouncil();

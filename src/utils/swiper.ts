@@ -9,7 +9,7 @@ export function swiperCouncil() {
   swiperCouncilContainer.forEach((container) => {
     new Swiper(container, {
       loop: true,
-      slidesPerView: '4',
+      slidesPerView: 4,
       spaceBetween: 40,
       speed: 500,
       centeredSlides: false,
@@ -26,6 +26,19 @@ export function swiperCouncil() {
       navigation: {
         nextEl: '.swiper-right',
         prevEl: '.swiper-left',
+      },
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          centeredSlides: true,
+        },
+        768: {
+          slidesPerView: 2,
+          centeredSlides: false,
+        },
+        1024: {
+          slidesPerView: 4,
+        },
       },
     });
   });
