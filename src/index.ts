@@ -14,7 +14,6 @@ window.Webflow.push(() => {
     loadScript(
       'https://cdn.jsdelivr.net/npm/@finsweet/attributes-scrolldisable@1/scrolldisable.js'
     ),
-    loadScript('https://cdn.jsdelivr.net/npm/@finsweet/attributes-cmsload@1/cmsload.js'),
   ]);
 
   if (window.innerWidth >= 1024) {

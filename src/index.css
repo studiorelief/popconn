@@ -12,3 +12,19 @@
 .swiper-slide.is-pioneers.w-dyn-item.w-dyn-repeater-item {
   background-color: white;
 }
+
+/* Pioneers Animation */
+
+.pioneers_item .pioneers_hover {
+  transform: translate(0px, 1.5rem);
+}
+
+.pioneers_item:hover .pioneers_hover {
+  opacity: 1;
+  z-index: 1;
+  transform: translate(0px, 0rem);
+}
+
+.pioneers_item:hover .pionners_galerie-images {
+  filter: brightness(30%);
+}
