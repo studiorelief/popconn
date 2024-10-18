@@ -28,3 +28,15 @@
 .pioneers_item:hover .pionners_galerie-images {
   filter: brightness(30%);
 }
+
+@media screen and (max-width: 767px) {
+  .pioneers_item .pioneers_hover {
+    opacity: 1;
+    z-index: 1;
+    transform: translate(0px, 0rem);
+  }
+
+  .pioneers_item .pionners_galerie-images {
+    filter: brightness(30%);
+  }
+}
